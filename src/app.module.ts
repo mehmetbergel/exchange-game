@@ -16,6 +16,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { SharePriceModule } from '~/share-price/share-price.module';
 import { AuthModule } from '~/auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
+import { SeederService } from "~/seeder/seeder.service";
 
 @Module({
   imports: [
@@ -49,6 +50,13 @@ import { ConfigModule } from '@nestjs/config';
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, SeederService],
 })
-export class AppModule {}
+
+export class AppModule {
+   constructor(private readonly seederService: SeederService) {}
+
+  async onModuleInit() {
+    await this.seederService.seed();
+  }
+}

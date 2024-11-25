@@ -28,12 +28,12 @@ async login(credentials: { email: string; password: string }) {
   const user = await this.userService.findByEmail(credentials.email);
 
   if (!user || !user.password) {
-    throw new Error('Invalid email or password');
+    throw new Error('Invalid email');
   }
 
   const isPasswordValid = await bcrypt.compare(credentials.password, user.password);
   if (!isPasswordValid) {
-    throw new Error('Invalid email or password');
+    throw new Error('Invalid  password');
   }
 
   const payload = { email: user.email, sub: user.id };

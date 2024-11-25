@@ -37,6 +37,9 @@ export class SharePrice {
   })
   createdAt: string | null;
 
+  @Column({ name: 'share_id' })
+  shareId: number;
+
   @ManyToOne(() => Share, (share) => share.sharePrice, {
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
