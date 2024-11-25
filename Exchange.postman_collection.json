@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "72bbe97e-4d5b-4972-95df-c7aab4b52ca8",
+		"name": "Exchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6664249",
+		"_collection_link": "https://martian-meadow-531064.postman.co/workspace/test~07641bf7-bc46-4a2c-b9c7-33e4d39d118a/collection/6664249-72bbe97e-4d5b-4972-95df-c7aab4b52ca8?action=share&source=collection_link&creator=6664249"
+	},
+	"item": [
+		{
+			"name": "Sell Share",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"walletId\": 1,\n  \"shareId\": 1,\n  \"quantity\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/trade/sell"
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Share",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"walletId\": 27,\n  \"shareId\": 31,\n  \"quantity\": 59\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/trade/buy"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user1@eva.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mehmet Bergel",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mehmet@bergel.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Eva123",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
