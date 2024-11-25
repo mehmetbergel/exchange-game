@@ -6,9 +6,9 @@ import {
   OneToOne,
   OneToMany,
 } from 'typeorm';
-import { User } from '../user/user.entity';
-import { WalletShares } from '../wallet-shares/wallet-shares.entity';
-import { Trade } from '../trade/trade.entity';
+import { User } from '~/user/user.entity';
+import { WalletShares } from '~/wallet-shares/wallet-shares.entity';
+import { Trade } from '~/trade/trade.entity';
 
 @Entity()
 export class Wallet {

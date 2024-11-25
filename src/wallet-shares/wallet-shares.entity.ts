@@ -5,8 +5,8 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Wallet } from '../wallet/wallet.entity';
-import { Share } from '../share/share.entity';
+import { Wallet } from '~/wallet/wallet.entity';
+import { Share } from '~/share/share.entity';
 
 @Entity()
 export class WalletShares {

@@ -5,9 +5,9 @@ import {
   OneToMany,
   JoinColumn,
 } from 'typeorm';
-import { SharePrice } from '../share-price/share-price.entity';
-import { WalletShares } from '../wallet-shares/wallet-shares.entity';
-import { Trade } from '../trade/trade.entity';
+import { SharePrice } from '~/share-price/share-price.entity';
+import { WalletShares } from '~/wallet-shares/wallet-shares.entity';
+import { Trade } from '~/trade/trade.entity';
 
 @Entity()
 export class Share {

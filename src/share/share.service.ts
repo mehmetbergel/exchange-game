@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Share } from './share.entity';
 import { Cron, CronExpression } from '@nestjs/schedule';
-import { SharePriceService } from '../share-price/share-price.service';
+import { SharePriceService } from '~/share-price/share-price.service';
 
 @Injectable()
 export class ShareService {

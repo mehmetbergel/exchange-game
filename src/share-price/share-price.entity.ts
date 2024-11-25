@@ -5,7 +5,7 @@ import {
   JoinColumn,
   ManyToOne,
 } from 'typeorm';
-import { Share } from '../share/share.entity';
+import { Share } from '~/share/share.entity';
 
 @Entity()
 export class SharePrice {
