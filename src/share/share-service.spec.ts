@@ -3,9 +3,9 @@ import { ShareService } from './share.service';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Share } from './share.entity';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { SharePriceService } from '../share-price/share-price.service';
+import { SharePriceService } from '~/share-price/share-price.service';
 import { BadRequestException } from '@nestjs/common';
-import { SharePrice } from '../share-price/share-price.entity';
+import { SharePrice } from '~/share-price/share-price.entity';
 
 describe('ShareService', () => {
   let service: ShareService;

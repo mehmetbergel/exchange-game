@@ -24,10 +24,22 @@ export class AuthService {
     return null;
   }
 
-  async login(user: any) {
-    const payload = { email: user.email };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
+async login(credentials: { email: string; password: string }) {
+  const user = await this.userService.findByEmail(credentials.email);
+
+  if (!user || !user.password) {
+    throw new Error('Invalid email or password');
   }
+
+  const isPasswordValid = await bcrypt.compare(credentials.password, user.password);
+  if (!isPasswordValid) {
+    throw new Error('Invalid email or password');
+  }
+
+  const payload = { email: user.email, sub: user.id };
+  return {
+    access_token: this.jwtService.sign(payload),
+  };
+}
+
 }
