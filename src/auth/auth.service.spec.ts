@@ -48,7 +48,7 @@ describe('AuthService', () => {
   });
 
   it('should return an access token on login', async () => {
-    const user = { email: 'test@test.com' };
+    const user = { email: 'test@test.com', password: '123' };
     const result = await service.login(user);
     expect(result).toEqual({ access_token: 'mockToken' });
     expect(mockJwtService.sign).toHaveBeenCalledWith({ email: 'test@test.com' });

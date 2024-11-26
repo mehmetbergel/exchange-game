@@ -75,7 +75,7 @@ describe('WalletShareService', () => {
 
       await service.updateWalletShare(walletShare, 5);
 
-      expect(walletShare.totalQuantity).toBe(15); // 10 + 5
+      expect(walletShare.totalQuantity).toBe(15);
       expect(new Date(walletShare.updatedAt).getTime()).toBeGreaterThan(
         new Date(walletShare.createdAt).getTime(),
       );

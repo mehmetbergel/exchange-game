@@ -146,7 +146,7 @@ describe('ShareService', () => {
       const result = service['randomCalculateNewPrice'](currentPrice);
 
       expect(typeof result).toBe('number');
-      expect(result).not.toEqual(currentPrice); // Yeni fiyat farklı olmalı
+      expect(result).not.toEqual(currentPrice);
     });
   });
 
